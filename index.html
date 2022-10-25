@@ -93,5 +93,118 @@
     .second-table .total{
     font-size: 34px;
     }
+    </style>
+    <script>
+        function sec(nomre) {
+    reqem = document.getElementById("iphoneTotal").innerHTML;
+    reqem = reqem + nomre;
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+
+}
+
+function menfi() {
+    reqem = document.getElementById("iphoneTotal").innerHTML;
+    reqem = "-" + reqem;
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+}
+
+function persen() {
+    reqem = document.getElementById("iphoneTotal").innerHTML;
+    reqem = reqem * 1 / 100;
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+}
+
+function noqte() {
+    reqem = document.getElementById("iphoneTotal").innerHTML
+    reqem = reqem + "."
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+}
+
+function resetIphone() {
+    reset = document.getElementById("iphoneTotal").innerHTML
+    reset = "";
+    document.getElementById("iphoneTotal").innerHTML = reset;
+}
+
+function azaltReqemi() {
+    reqem = document.getElementById("iphoneTotal").innerHTML
+    document.getElementById("iphoneTotal").innerHTML = reqem.substring(0, reqem.length - 1);
+
+
+} function vurma() {
+    reqem = document.getElementById("iphoneTotal").innerHTML
+    reqem = reqem + "*"
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+}
+
+function bolme() {
+    reqem = document.getElementById("iphoneTotal").innerHTML
+    reqem = reqem + "/"
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+}
+function cixma() {
+    reqem = document.getElementById("iphoneTotal").innerHTML
+    reqem = reqem + "-"
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+
+}
+function toplama() {
+    reqem = document.getElementById("iphoneTotal").innerHTML
+    reqem = reqem + "+"
+    document.getElementById("iphoneTotal").innerHTML = reqem;
+
+}
+
+
+
+function yoxlama() {
+    if (isNaN(eval(neticemiz)) !== false) {
+        alert("Səhflik var")
+    }
+}
+
+function neticeIphone() {
+    neticemiz = document.getElementById("iphoneTotal").innerHTML
+    yoxlama();
+    document.getElementById("iphoneTotal").innerHTML = eval(neticemiz)
+
+}
+    </script>
+    <div class="iphone">
+        <table class="second-table">
+            <tr>
+                <td colspan="4" class="total"><span id="iphoneTotal"></span></td>
+            </tr>
+            <tr>
+                <td><button onclick="resetIphone()" class="aaa">AC</button></td>
+                <td><button onclick="menfi()" class="aaa">+/-</button></td>
+                <td><button onclick="persen()" class="aaa">%</button></td>
+                <td><button onclick="bolme()" class="iphone-operation">÷</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="sec(7)">7</button></td>
+                <td><button onclick="sec(8)">8</button></td>
+                <td><button onclick="sec(9)">9</button></td>
+                <td><button onclick="vurma()" class="iphone-operation">X</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="sec(4)">4</button></td>
+                <td><button onclick="sec(5)">5</button></td>
+                <td><button onclick="sec(6)">6</button></td>
+                <td><button onclick="cixma()" class="iphone-operation">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="sec(1)">1</button></td>
+                <td><button onclick="sec(2)">2</button></td>
+                <td><button onclick="sec(3)">3</button></td>
+                <td><button onclick="toplama()" class="iphone-operation">+</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="sec(0)" class="zero">0</button></td>
+                <td><button onclick="noqte()">.</button></td>
+                <td><button onclick="neticeIphone()" class="iphone-operation">=</button></td>
+            </tr>
+        </table>
+    </div
 </body>
 </html>
